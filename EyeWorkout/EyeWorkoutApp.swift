@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct EyeWorkoutApp: App {
+    @StateObject private var mainViewModel = MainViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView(viewModel: mainViewModel)
         }
     }
 }
